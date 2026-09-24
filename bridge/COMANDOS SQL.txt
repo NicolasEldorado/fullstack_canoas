@@ -1,0 +1,44 @@
+COMANDOS SQL:
+
+-- Table: public.autores
+
+-- DROP TABLE IF EXISTS public.autores;
+
+CREATE TABLE IF NOT EXISTS public.autores
+(
+    id_autor integer NOT NULL,
+    nome text COLLATE pg_catalog."default" NOT NULL,
+    nacionalidade text COLLATE pg_catalog."default",
+    CONSTRAINT pk_autores PRIMARY KEY (id_autor)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.autores
+    OWNER to postgres;
+
+
+
+-- Table: public.livros
+
+-- DROP TABLE IF EXISTS public.livros;
+
+CREATE TABLE IF NOT EXISTS public.livros
+(
+    id_livro integer NOT NULL,
+    titulo text COLLATE pg_catalog."default" NOT NULL,
+    ano integer NOT NULL,
+    preco real NOT NULL,
+    categoria text COLLATE pg_catalog."default" NOT NULL,
+    id_autor integer,
+    CONSTRAINT pk_livros PRIMARY KEY (id_livro),
+    CONSTRAINT fk_id_autor FOREIGN KEY (id_autor)
+        REFERENCES public.autores (id_autor) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.livros
+    OWNER to postgres;
