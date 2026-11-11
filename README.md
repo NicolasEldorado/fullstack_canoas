@@ -5,4 +5,5 @@
 ### Links
 - [Caixa de ferramentas](https://app.notion.com/p/Toolbox-Resid-ncia-Fullstack-5-0-388a9c8077ba8087ac28e1e7ecceb19b)
 - [Vaga Banrisul](https://www.banrisul.com.br/bob/site/link/estagio.html)
+- Exercício: (https://drive.google.com/file/d/1r1Rw7GuouqDAFB00kBft8I2xqA2noxC7/view?usp=sharing)
 
